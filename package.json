@@ -1,0 +1,19 @@
+{
+  "name": "geometry-lab-review",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive Geometry comprehensive exam review app organized by unit.",
+  "scripts": {
+    "check": "node --check script.js",
+    "check:html": "python3 -c \"from html.parser import HTMLParser; HTMLParser().feed(open('index.html', encoding='utf-8').read()); print('html parsed')\"",
+    "serve": "python3 -m http.server 4173",
+    "test": "npm run check && npm run check:html"
+  },
+  "keywords": [
+    "geometry",
+    "education",
+    "interactive",
+    "github-pages"
+  ],
+  "license": "UNLICENSED"
+}

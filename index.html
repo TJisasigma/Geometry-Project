@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometry Comprehensive Exam Interactive Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Geometry Lab home"><span>△</span> Geometry Lab</a>
+      <div class="nav-actions">
+        <button id="themeToggle" class="ghost-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+        <a class="ghost-btn" href="#practice">Practice</a>
+      </div>
+    </nav>
+    <section id="top" class="hero-grid">
+      <div>
+        <p class="eyebrow">Comprehensive Exam Review</p>
+        <h1>Interactive Geometry learning environments for every review-sheet concept.</h1>
+        <p class="hero-copy">Move sliders, drag points, calculate missing values, and read the rules that make each topic work. Units are organized in the same order as your sheet, without the repeated date text.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#units">Start exploring</a>
+          <button class="secondary-btn" id="randomConcept" type="button">Surprise me</button>
+        </div>
+      </div>
+      <div class="glass-card hero-card" aria-label="Exam format summary">
+        <h2>Exam format</h2>
+        <ul>
+          <li><strong>Part 1:</strong> 40 ExamSoft questions, 1 point each.</li>
+          <li><strong>Part 2:</strong> 9 written questions, 60 points total.</li>
+          <li><strong>Timing:</strong> 2 hour period; first hour max for Part 1.</li>
+          <li><strong>Calculator:</strong> scientific calculators only.</li>
+        </ul>
+        <div class="mini-visual" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Study controls">
+      <div class="search-wrap">
+        <label for="searchInput">Find a concept</label>
+        <input id="searchInput" type="search" placeholder="Try: Law of Sines, CPCTC, arc length..." />
+      </div>
+      <div class="progress-card">
+        <span id="progressText">0 concepts checked</span>
+        <div class="progress-track"><div id="progressFill"></div></div>
+      </div>
+    </section>
+
+    <section id="units" class="units-layout">
+      <aside class="unit-nav">
+        <h2>Units</h2>
+        <ol id="unitNavList"></ol>
+      </aside>
+      <div id="unitContainer" class="unit-container"></div>
+    </section>
+
+    <section id="practice" class="practice-section">
+      <div class="section-heading">
+        <p class="eyebrow">Written-response trainer</p>
+        <h2>Part 2 focus prompts</h2>
+        <p>Use these prompts to practice showing work. Click a card to reveal a strategy checklist.</p>
+      </div>
+      <div id="partTwoContainer" class="practice-grid"></div>
+    </section>
+  </main>
+
+  <template id="conceptTemplate">
+    <article class="concept-card">
+      <div class="concept-head">
+        <div>
+          <p class="concept-path"></p>
+          <h3></h3>
+        </div>
+        <label class="check-label"><input type="checkbox" class="mastered-check" /> Got it</label>
+      </div>
+      <div class="concept-body">
+        <div class="lab-panel"></div>
+        <div class="info-panel">
+          <h4>What to know</h4>
+          <p class="description"></p>
+          <h4>Rules / formulas</h4>
+          <ul class="rules"></ul>
+          <h4>Try this</h4>
+          <p class="prompt"></p>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
